@@ -1,0 +1,4 @@
+# ninja log v5
+0	4133	1682398264924555687	/home/zijian/Desktop/satelite/DINO/models/dino/ops/build/temp.linux-x86_64-3.7/home/zijian/Desktop/satelite/DINO/models/dino/ops/src/cpu/ms_deform_attn_cpu.o	633ce301dd7182d4
+1	14134	1682398274920748360	/home/zijian/Desktop/satelite/DINO/models/dino/ops/build/temp.linux-x86_64-3.7/home/zijian/Desktop/satelite/DINO/models/dino/ops/src/cuda/ms_deform_attn_cuda.o	c388b08d28f8f9f3
+1	15208	1682398275984768852	/home/zijian/Desktop/satelite/DINO/models/dino/ops/build/temp.linux-x86_64-3.7/home/zijian/Desktop/satelite/DINO/models/dino/ops/src/vision.o	62127cd2fde4b7e7

@@ -1,0 +1,6 @@
+__pycache__
+checkpoints
+wandb
+logs
+.env
+**/outputs/*
