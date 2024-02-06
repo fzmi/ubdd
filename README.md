@@ -1,6 +1,8 @@
 # U-BDD++: Unsupervised Building Damage Detection from Satellite Imagery
 Code implementation of "Learning Efficient Unsupervised Satellite Image-based Building Damage Detection" from ICDM 2023.
 
+[[Paper on ArXiv](https://arxiv.org/abs/2312.01576)] [[BibTeX](#citation)]
+
 ## Overview
 This repository contains code for U-BDD++.
 
@@ -44,20 +46,20 @@ pip install git+https://github.com/IDEA-Research/GroundingDINO.git
 pip install -r requirements.txt
 ```
 
-As per installation requirement from Grounding DINO, please make sure the environment variable `CUDA_HOME` is set.
+> [!NOTE]
+> As per installation requirement from Grounding DINO, please make sure the environment variable `CUDA_HOME` is set.
 `export CUDA_HOME=/path/to/cuda-xx.x`
-
+>
+> Additionally, DINO requires building the custom PyTorch ops:
+> ```sh
+> cd models/dino/ops
+> python setup.py build install
+> ```
 
 <!-- To install the requirements, please run:
 ```sh
 pip install -r requirements.txt
 ``` -->
-
-Additionally, DINO requires building the custom PyTorch ops:
-```sh
-cd models/dino/ops
-python setup.py build install
-```
 
 ### Pre-trained Weights
 You can download the pre-trained weights of U-BDD++ for evaluation.
@@ -96,10 +98,10 @@ Thanks to the authors for their great work!
 If you find this repository useful in your research, please use the following BibTeX for citation:
 
 ```bibtex
-@article{zhang2023ubdd,
+@article{zhang2023learning,
   title={Learning Efficient Unsupervised Satellite Image-based Building Damage Detection},
   author={Zhang, Yiyun and Wang, Zijian and Luo, Yadan and Yu, Xin and Huang, Zi},
-  journal={},
+  journal={arXiv preprint arXiv:2312.01576},
   year={2023}
 }
 ```
