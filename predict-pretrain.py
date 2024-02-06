@@ -76,7 +76,7 @@ def ubdd_plusplus(
     dino_threshold,
     save_annotations,
     dataloader,
-    device,x``
+    device
 ):
     f1_total = torch.zeros(3).to(device)
     iou_total = torch.zeros(3).to(device)
