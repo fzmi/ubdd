@@ -4,3 +4,6 @@ wandb
 logs
 .env
 **/outputs/*
+models/dino/models/dino/ops/build
+models/dino/models/dino/ops/dist
+models/dino/models/dino/ops/*.egg-info

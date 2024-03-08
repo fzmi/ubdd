@@ -1,7 +1,7 @@
 # U-BDD++: Unsupervised Building Damage Detection from Satellite Imagery
 Code implementation of "Learning Efficient Unsupervised Satellite Image-based Building Damage Detection" from ICDM 2023.
 
-[[Paper on ArXiv](https://arxiv.org/abs/2312.01576)] [[BibTeX](#citation)]
+[[Paper on ArXiv (Full Ver.)](https://arxiv.org/abs/2312.01576)] [[Paper on ICDM (Short Ver.)](https://ieeexplore.ieee.org/abstract/document/10415707)] [[BibTeX](#citation)]
 
 ## Overview
 This repository contains code for U-BDD++.
@@ -36,23 +36,27 @@ This will create a new folder `masks` under each dataset split folder, which con
 To start, please clone this repository to your local machine and follow the instructions below.
 
 ### Requirements
-This repository requires `python>=3.9`, `pytorch>=1.13` and `torchvision>=0.14`. Older versions may work, but they are not tested.
+This repository requires `python>=3.9`, `torch>=1.13` and `torchvision>=0.14`. Older versions may work, but they are not tested.
+
+> [!NOTE]
+> As per installation requirement from Grounding DINO, please make sure the environment variable `CUDA_HOME` is set.
+> 
+> `export CUDA_HOME=/path/to/cuda-xx.x`
 
 ```sh
-pip install git+https://github.com/facebookresearch/segment-anything.git
+# Grounding DINO does not support CUDA 12+ yet, this sample index-url uses CUDA 11.8
+pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
 
 pip install git+https://github.com/IDEA-Research/GroundingDINO.git
-
+pip install git+https://github.com/facebookresearch/segment-anything.git
+pip install git+https://github.com/openai/CLIP.git
 pip install -r requirements.txt
 ```
 
 > [!NOTE]
-> As per installation requirement from Grounding DINO, please make sure the environment variable `CUDA_HOME` is set.
-`export CUDA_HOME=/path/to/cuda-xx.x`
->
-> Additionally, DINO requires building the custom PyTorch ops:
+> Additionally, DINO requires building the custom PyTorch ops for MultiScaleDeformableAttention:
 > ```sh
-> cd models/dino/ops
+> cd models/dino/models/dino/ops
 > python setup.py build install
 > ```
 
