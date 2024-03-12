@@ -68,18 +68,22 @@ pip install -r requirements.txt
 ### Pre-trained Weights
 You can download the pre-trained weights of U-BDD++ for evaluation.
 
+| Model | Backbone | Weights |
+| :---: | :---: | :---: |
+| U-BDD++ | Resnet | [Google Drive](https://drive.google.com/file/d/1UQGCtadrJ2RFZZDrI43wJ0Ed1MJRiDhK/view?usp=sharing) |
+| U-BDD++ | Swin | [Google Drive](https://drive.google.com/file/d/178OV_VW2BzBZzJOK5ajimo_PykkxH6Ui/view?usp=sharing) |
+
 [Coming Soon]
 
 ## Evaluation
 
 To evaluate U-BDD++ on xBD dataset, please run:
 ```sh
-CUDA_VISIBLE_DEVICES=0 python predict.py --test-set-path "path/to/xbd/test" --dino-path "path/to/dino/weights" --dino-config "path/to/dino/config" --sam-path "path/to/sam/weights"
+CUDA_VISIBLE_DEVICES=0 python predict-pretrain.py --test-set-path "path/to/xbd/test" --dino-path "path/to/dino/weights" --dino-config "path/to/dino/config" --sam-path "path/to/sam/weights"
 
 # for example
-CUDA_VISIBLE_DEVICES=0 python predict-pretrain.py --test-set-path "/home/datasets/xbd/test" --dino-path "/home/outputs/dino/resnet/bld-det-pl-2023-06-22-19-53-11/checkpoint0011.pth" --dino-config "/home/U-BDD/models/dino/config/DINO_4scale_UBDD_resnet.py" --sam-path "/home/checkpoints/SAM/sam_vit_h_4b8939.pth"
+CUDA_VISIBLE_DEVICES=0 python predict-pretrain.py --test-set-path "/home/datasets/xbd/test" --dino-path "/home/ubdd-dino-resnet.pth" --dino-config "/home/ubdd/models/dino/config/DINO_4scale_UBDD_resnet.py" --sam-path "/home/checkpoints/SAM/sam_vit_h_4b8939.pth"
 ```
-
 
 ## License
 This repository is released under the MIT license. Please see the [LICENSE](LICENSE) file for more information.
